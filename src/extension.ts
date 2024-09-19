@@ -11,21 +11,21 @@ export function activate(context: vscode.ExtensionContext) {
 		vscode.window.showInformationMessage('RobotPy Sync');
 
 		terminal.show();
-		terminal.sendText("robotpy sync");
+		terminal.sendText("python3 -m robotpy sync");
 	});
 
 	let deploy = vscode.commands.registerCommand('robotpy.deploy', () => {
 		vscode.window.showInformationMessage('RobotPy Deploy');
 
 		terminal.show();
-		terminal.sendText("robotpy deploy --skip-tests");
+		terminal.sendText("python3 -m robotpy deploy --skip-tests");
 	});
 
 	let simulate = vscode.commands.registerCommand('robotpy.simulate', () => {
 		vscode.window.showInformationMessage('RobotPy Simulate');
 
 		terminal.show();
-		terminal.sendText("robotpy sim");
+		terminal.sendText("python3 -m robotpy sim");
 	});
 
 	context.subscriptions.push(sync);
